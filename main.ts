@@ -10,6 +10,7 @@ bluetooth.onBluetoothDisconnected(function () {
 let accelerationZ = 0
 let accelerationY = 0
 let accelerationX = 0
+basic.showIcon(IconNames.SmallHeart)
 // Habilita el servicio de UART
 bluetooth.startUartService()
 // Configuración al iniciar

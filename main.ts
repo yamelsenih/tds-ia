@@ -34,7 +34,7 @@ basic.forever(function () {
     // Sin embargo, para una demostración sencilla, podemos usar la consola serie o un truco.
     // **Importante:** La implementación de Bluetooth en Micro:bit MakeCode es simplificada.
     // Para enviar datos del acelerómetro, lo más común es usar el servicio de UART.
-    bluetooth.uartWriteString("" + accelerationX + "." + accelerationY)
+    bluetooth.uartWriteString("" + accelerationX + ".0")
     // Envía cada 100ms
     basic.pause(1000)
 })

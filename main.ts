@@ -7,10 +7,10 @@ bluetooth.onBluetoothDisconnected(function () {
     // Muestra "no" cuando está desconectado
     basic.showIcon(IconNames.No)
 })
-let jsonData = ""
 let accelerationZ = 0
 let accelerationY = 0
 let accelerationX = 0
+let jsonData = ""
 // Habilita el servicio de UART
 bluetooth.startUartService()
 // Configuración al iniciar
@@ -34,8 +34,7 @@ basic.forever(function () {
     // Sin embargo, para una demostración sencilla, podemos usar la consola serie o un truco.
     // **Importante:** La implementación de Bluetooth en Micro:bit MakeCode es simplificada.
     // Para enviar datos del acelerómetro, lo más común es usar el servicio de UART.
-    jsonData = "{\"measure\":" + accelerationX + ",\"y\":" + accelerationY + ",\"z\":" + accelerationZ + "}"
-    bluetooth.uartWriteString(jsonData)
+    bluetooth.uartWriteString("" + accelerationX)
     // Envía cada 100ms
     basic.pause(1000)
 })
